@@ -1,0 +1,16 @@
+{
+  "name": "library-project",
+  "version": "1.0.0",
+  "description": "Project for my Node.js + MongoDB course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "borquezln",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

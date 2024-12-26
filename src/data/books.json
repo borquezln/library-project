@@ -1,0 +1,122 @@
+[
+  {
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "year": 1903,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/26/JackLondoncallwild.jpg"
+  },
+  {
+    "title": "The Jungle",
+    "author": "Upton Sinclair",
+    "year": 1906,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/The_Jungle_%281906%29_cover.jpg/1200px-The_Jungle_%281906%29_cover.jpg"
+  },
+  {
+    "title": "Sons and Lovers",
+    "author": "D.H. Lawrence",
+    "year": 1913,
+    "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781625587770/sons-and-lovers-9781625587770_hr.jpg"
+  },
+  {
+    "title": "My Ántonia",
+    "author": "Willa Cather",
+    "year": 1918,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_785666-MLA79545329283_092024-O.webp"
+  },
+  {
+    "title": "Ulysses",
+    "author": "James Joyce",
+    "year": 1922,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ulysses%2C_1922.djvu/page1-1200px-Ulysses%2C_1922.djvu.jpg"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/53/71/5371a1e476100b2c7be95ddeef567d88.jpg"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "year": 1932,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/a9/5f/a95f66e0851fceae573cc3bbe12b930f.jpg"
+  },
+  {
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "year": 1937,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_857424-MLA70594597670_072023-O.webp"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/b0/39/b039af065268818b7bd3b0e016f8db65.jpg"
+  },
+  {
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "year": 1947,
+    "img": "https://m.media-amazon.com/images/I/51Eyjz65gyL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "title": "Lolita",
+    "author": "Vladimir Nabokov",
+    "year": 1955,
+    "img": "https://pictures.abebooks.com/isbn/9788433930811-es.jpg"
+  },
+  {
+    "title": "On the Road",
+    "author": "Jack Kerouac",
+    "year": 1957,
+    "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/f6/ac/f6ac74d57758861895af901588a14a72.jpg"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+  },
+  {
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "year": 1967,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/520x520/90/d6/90d6455083f95cb36dc10052fe29f2ea.jpg"
+  },
+  {
+    "title": "The Dispossessed",
+    "author": "Ursula K. Le Guin",
+    "year": 1974,
+    "img": "https://m.media-amazon.com/images/I/91v+uOTqnzL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "year": 1977,
+    "img": "https://cdn.kobo.com/book-images/f869dd07-5272-4687-a676-33bcc2983adc/1200/1200/False/the-shining-1.jpg"
+  },
+  {
+    "title": "El nombre de la rosa",
+    "author": "Umberto Eco",
+    "year": 1980,
+    "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/79/02/790216040eb29268f55c59b01b1b2e11.jpg"
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "year": 1987,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beloved_%281987_1st_ed_dust_jacket_cover%29.jpg"
+  },
+  {
+    "title": "The Wind-Up Bird Chronicle",
+    "author": "Haruki Murakami",
+    "year": 1994,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_928988-MLA75956401401_042024-O.webp"
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "year": 1997,
+    "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/3b/5e/3b5efaf14facaf0246cc6cd2ee086970.jpg"
+  }
+]

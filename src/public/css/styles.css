@@ -1,0 +1,32 @@
+:root {
+    font-family: sans-serif;
+    font-weight: 400;
+    color-scheme: dark;
+    color: antiquewhite;
+    background-color: #333333;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    row-gap: 2rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    border: 1px solid antiquewhite;
+    padding: 0.8rem;
+}
+
+.book-card img {
+    height: 200px;
+    margin-top: 1rem;
+}
+
+.book-card h3 {
+    text-align: center;
+    margin: 0;
+}

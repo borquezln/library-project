@@ -1,0 +1,23 @@
+<%- include('./partials/doctype') %>
+<body>
+    <%- include('./partials/header') %>
+    
+    <h1>
+        <%= title %>
+    </h1>
+
+    <main class="container">
+        <% books.forEach((book) => { %>
+            <article class="book-card">
+                <h3>Título: 
+                    <%= book.title %>
+                </h3>
+                <p>Publicación:
+                    <%= book.author %> - <%= book.year %>
+                    <br><img src="<%= book.img %>">
+                </p>
+            </article>
+        <% }) %>
+    </main>
+</body>
+</html>
