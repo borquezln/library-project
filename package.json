@@ -1,0 +1,17 @@
+{
+  "name": "library-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "borquezln",
+  "license": "ISC",
+  "description": "Project for my node + mongodb course",
+  "dependencies": {
+    "express": "4.21.2",
+    "mongoose": "8.9.5"
+  }
+}
