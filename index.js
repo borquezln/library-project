@@ -4,6 +4,7 @@ process.loadEnvFile();
 
 // Importaciones propias
 import { booksRouter } from './src/routes/booksRouter.js';
+import { usersRouter } from './src/routes/usersRouter.js';
 
 // Creación de la aplicación
 const app = express();
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // Rutas
 app.use('/api/books', booksRouter);
+app.use('/api/users', usersRouter);
 app.use('*', (req, res) => {
     res.status(404).json({ error: 'Not found' });
 });

@@ -35,7 +35,7 @@ const createBook = async (req, res) => {
         if (error.name === 'ZodError') {
             res.status(400).json({
                 name: 'Error en la validación de datos',
-                message: error.errors[0].message }
+                message: error.errors }
             );
         }
         else if (error.name === 'MongoServerError' && error.code === 11000) {
@@ -59,11 +59,11 @@ const updateBook = async (req, res) => {
         if (error.name === 'ZodError') {
             res.status(400).json({
                 name: 'Error en la validación de datos',
-                message: error.errors[0].message }
+                message: error.errors }
             );
         }
         else if (error.name === 'MongoServerError' && error.code === 11000) {
-            res.status(409).json({ name: error.name, message: error.message });
+            res.status(409).json({ name: error.name, message: "El ISBN indicado ya existe" });
         } else {
             res.status(500).json({ name: error.name, message: error.message });
         }
