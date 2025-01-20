@@ -4,7 +4,7 @@ const bookSchemaZod = z.object({
     title: z.string({ message: 'El título debe ser un string'}).nonempty({ message: 'El título es obligatorio'}).trim(),
     author: z.string({ message: 'El autor debe ser un string'}).nonempty({ message: 'El autor es obligatorio'}).trim(),
     genre: z.string({ message: 'El género debe ser un string'}).trim().optional(),
-    publishedDate: z.date({ message: 'La fecha de publicación debe ser una fecha'}).optional(),
+    publishedYear: z.number({ message: 'El año de publicación debe ser un número'}).optional(),
     publisher: z.string({ message: 'La editorial debe ser un string'}).trim().optional(),
     isbn: z.string({ message: 'El ISBN debe ser un string'}).trim(),
     observations: z.string({ message: 'Las observaciones deben ser un string'}).trim().optional(),

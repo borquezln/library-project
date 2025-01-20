@@ -83,4 +83,46 @@ const deleteBook = async (req, res) => {
     }
 }
 
-export { getAllBooks, createBook, updateBook, deleteBook, getOneBook };
+const bookStats = async (req, res) => {
+    try {
+        const stats = await Book.aggregate([
+            {
+                $group: {
+                    _id: null,
+                    count: { $sum: 1 },
+                    maxPrice: { $max: '$price' },
+                    minPrice: { $min: '$price' },
+                    avgPrice: { $avg: '$price' }
+                }
+            }
+        ]);
+        const { count, maxPrice, minPrice, avgPrice } = stats[0];
+        res.status(200).json({ count, maxPrice, minPrice, avgPrice });
+    } catch(error) {
+        res.status(500).json({ name: error.name, message: error.message });
+    }
+}
+
+const searchBooks = async (req, res) => {
+    try {
+        const query = {};        
+        const { minPrice, maxPrice, minStock, maxStock, order = "asc" } = req.query;
+
+        if (minPrice)
+            query.price = { ...query.price, $gte: parseInt(minPrice) };
+        if (maxPrice)
+            query.price = { ...query.price, $lte: parseInt(maxPrice) };
+        if (minStock)
+            query.stock = { ...query.stock, $gte: parseInt(minStock) };
+        if (maxStock)
+            query.stock = { ...query.stock, $lte: parseInt(maxStock) };
+        const sortOrder = order === "asc" ? { price: 1 } : { price: -1 };
+
+        const books = await Book.find(query).sort(sortOrder);
+        res.status(200).json(books);
+    } catch(error) {
+        res.status(500).json({ name: error.name, message: error.message });
+    }
+}
+
+export { getAllBooks, createBook, updateBook, deleteBook, getOneBook, bookStats, searchBooks };

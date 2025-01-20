@@ -18,8 +18,8 @@ const bookSchema = new Schema(
             required: false,
             trim: true,
         },
-        publishedDate: {
-            type: Date,
+        publishedYear: {
+            type: Number,
             required: false,
         },
         publisher: {
