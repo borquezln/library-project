@@ -63,7 +63,7 @@ const updateBook = async (req, res) => {
             );
         }
         else if (error.name === 'MongoServerError' && error.code === 11000) {
-            res.status(409).json({ name: error.name, message: "El ISBN indicado ya existe" });
+            res.status(409).json({ name: error.name, message: 'El ISBN indicado ya existe' });
         } else {
             res.status(500).json({ name: error.name, message: error.message });
         }
@@ -106,7 +106,7 @@ const bookStats = async (req, res) => {
 const searchBooks = async (req, res) => {
     try {
         const query = {};        
-        const { minPrice, maxPrice, minStock, maxStock, order = "asc" } = req.query;
+        const { minPrice, maxPrice, minStock, maxStock, order = 'asc' } = req.query;
 
         if (minPrice)
             query.price = { ...query.price, $gte: parseInt(minPrice) };
@@ -116,7 +116,7 @@ const searchBooks = async (req, res) => {
             query.stock = { ...query.stock, $gte: parseInt(minStock) };
         if (maxStock)
             query.stock = { ...query.stock, $lte: parseInt(maxStock) };
-        const sortOrder = order === "asc" ? { price: 1 } : { price: -1 };
+        const sortOrder = order === 'asc' ? { price: 1 } : { price: -1 };
 
         const books = await Book.find(query).sort(sortOrder);
         res.status(200).json(books);

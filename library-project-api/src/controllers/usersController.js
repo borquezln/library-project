@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
             );
         }
         else if (error.name === 'MongoServerError' && error.code === 11000) {
-            res.status(409).json({ name: error.name, message: "El correo electrónico ya está registrado" });
+            res.status(409).json({ name: error.name, message: 'El correo electrónico ya está registrado' });
         } else {
             res.status(500).json({ name: error.name, message: error.message });
         }

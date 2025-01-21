@@ -1,5 +1,6 @@
 // Importaciones globales
 import express from 'express';
+import cors from 'cors';
 process.loadEnvFile();
 
 // Importaciones propias
@@ -12,6 +13,7 @@ const PORT = process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
 
 // Configuraciones
+app.use(cors({ origin: 'http://localhost:5173' }));
 import { connectDB } from './src/config/mongo.js';
 
 // Uso de middlewares
