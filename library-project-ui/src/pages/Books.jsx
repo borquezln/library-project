@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import BookCard from '../components/BookCard';
 import BookForm from '../components/BookForm';
-import { getBooks, getBook, createBook, updateBook, deleteBook } from '../services/apiLibrary';
+import { getBooks, createBook, updateBook, deleteBook, getFilteredBooks, getStatsBooks } from '../services/apiLibrary';
 
 const Books = () => {
     const [books, setBooks] = useState([]);
@@ -37,6 +37,24 @@ const Books = () => {
         }
     }
 
+    const handleUpdate = async (isbn, book) => {
+        try {
+            await updateBook(isbn, book);
+            fetchBooks();
+        } catch (error) {
+            console.log('Error editando el libro:', error);
+        }
+    };
+    
+    const handleFilter = async (filteredBooks) => {
+        try {
+            const data = await getFilteredBooks(filteredBooks);
+            setBooks(data);
+        } catch (error) {
+            console.log('Error fetching books:', error)
+        }
+    }
+    
     useEffect(() => {
         fetchBooks();
     }, []);
@@ -59,7 +77,7 @@ const Books = () => {
                             books.map(book => {
                                 return (
                                     <div className='column is-one-quarter' key={book.isbn}>
-                                        <BookCard book={book} onDelete={handleDelete} />
+                                        <BookCard book={book} onDelete={handleDelete} onUpdate={handleUpdate} />
                                     </div>
                                 )
                             })

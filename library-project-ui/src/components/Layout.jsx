@@ -8,6 +8,8 @@ const Layout = ({ children }) => {
                     <div className='navbar-menu is-flex is-justify-content-center'>
                         <Link to='/' className='navbar-item'>Home</Link>
                         <Link to='/books' className='navbar-item'>Books</Link>
+                        <Link to='/stats' className='navbar-item'>Estadísticas</Link>
+                        <Link to='/users' className='navbar-item'>Usuarios</Link>
                     </div>
                 </nav>
             </header>
@@ -20,7 +22,8 @@ const Layout = ({ children }) => {
 
             <footer className='footer has-background-primary has-text-black'>
                 <div className='content has-text-centered'>
-                    <p>Lean Borquez</p>
+                    <p>Sitio desarrollado por <a href='https://github.com/borquezln' target='_blank' className='has-text-white'>@borquezln</a></p>
+                    <p>Tecnologías: NodeJS - MongoDB - Express - React - Bulma</p>
                 </div>
             </footer>
         </div>

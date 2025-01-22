@@ -5,8 +5,8 @@ const Home = () => {
         <Layout>
             <section className='section'>
                 <div className='container'>
-                    <h1 className='title'>Home</h1>
-                    <p>Welcome to yout Library Manager!</p>
+                    <h1 className='title'>¡Bienvenido!</h1>
+                    <p>Administra eficientemente tu existencia de libros</p>
                 </div>
             </section>
         </Layout>

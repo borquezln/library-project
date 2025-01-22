@@ -39,19 +39,5 @@ userSchema.post('save', function(error, doc, next) {
     next();
 });
 
-// userSchema.post('findOneAndUpdate', function(error, doc, next) {
-//     if (error) {
-//         next(error);
-//     }
-//     next();
-// });
-
-// userSchema.post('findOneAndDelete', function(error, doc, next) {
-//     if (error) {
-//         next(error);
-//     }
-//     next();
-// });
-
 const User = model('User', userSchema);
 export { User };

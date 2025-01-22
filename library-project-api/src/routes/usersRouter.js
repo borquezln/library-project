@@ -5,6 +5,5 @@ const usersRouter = Router();
 
 usersRouter.post('/register', createUser);
 usersRouter.post('/login', loginUser);
-// usersRouter.post('/logout', logoutUser);
 
 export { usersRouter };

@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-const BookForm = ({ onSubmit }) => {
+const BookUpdateForm = ({ book, onSubmit }) => {
     const initialFormData = {
-        title: '',
-        author: '',
-        isbn: '',
-        price: 0,
-        stock: 0,
-        genre: '',
-        publishedYear: 0,
-        publisher: '',
-        observations: '',
-        description: '',
+        title: book.title,
+        author: book.author,
+        isbn: book.isbn,
+        price: book.price,
+        stock: book.stock,
+        genre: book.genre,
+        publishedYear: book.publishedYear,
+        publisher: book.publisher,
+        observations: book.observations,
+        description: book.description,
     };
     const [formData, setFormData] = useState(initialFormData);
 
@@ -20,17 +20,17 @@ const BookForm = ({ onSubmit }) => {
         setFormData((formData) => ({
             ...formData,
             [name]:
-                name === 'price' || name === 'stock' || name === 'publishedYear' ?
-                    Number(value) : value,
+            name === 'price' || name === 'stock' || name === 'publishedYear' ?
+                Number(value) : value,
         }));
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        onSubmit(book.isbn, formData);
         setFormData(initialFormData);
-    };
-    
+    }
+
     return (
         <form onSubmit={ handleSubmit } className='box'>
             <div className='field'>
@@ -156,7 +156,7 @@ const BookForm = ({ onSubmit }) => {
                 </div>
             </div>
         </form>
-    );
+  )
 }
 
-export default BookForm;
+export default BookUpdateForm;
